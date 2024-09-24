@@ -107,7 +107,7 @@ async def update_user_settings(query):
     user_id = query.from_user.id
     thumbnail = f"Thumbnails/{user_id}.jpg"
     if not await aiopath.exists(thumbnail):
-        thumbnail = "https://graph.org/file/73ae908d18c6b38038071.jpg"
+        thumbnail = "https://telegra.ph/file/27061ef540f186a18f66b.png"
     await edit_message(query.message, msg, button, photo=thumbnail, MARKDOWN=True)
 
 
@@ -119,7 +119,7 @@ async def user_settings(_, message):
     user_id = from_user.id
     thumbnail = f"Thumbnails/{user_id}.jpg"
     if not await aiopath.exists(thumbnail):
-        thumbnail = "https://graph.org/file/73ae908d18c6b38038071.jpg"
+        thumbnail = "https://telegra.ph/file/27061ef540f186a18f66b.png"
     x = await send_message(message, msg, button, photo=thumbnail, MARKDOWN=True)
     await five_minute_del(message)
     await delete_message(x)
